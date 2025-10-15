@@ -1,3 +1,5 @@
+// -------- Grafica 1 --------
+
 function pintarGraficaPeliculas(dataset){
     const listPeliculas = [];
     const listYears = [];
@@ -45,10 +47,16 @@ async function getData() {
 }
 getData();
 
+
+// -------- Grafica 2 --------
+
 function pintarGraficaPersonajes(dataset){
     const listPersonajes = [];
     const listEpisodios = [];
-    dataset.forEach((personaje) => {
+
+    const primeros20 = dataset.slice(0, 20);
+
+    primeros20.forEach((personaje) => {
     listPersonajes.push(personaje.name);
     listEpisodios.push(personaje.films.length); 
 });
